@@ -1,0 +1,87 @@
+<resources>
+    <string name="app_name">Golf Handicap App</string>
+    <string name="welcome">Welcome Golfers!</string>
+    <string name="begin">Start a Round</string>
+
+
+    <string name="instructions1">Please Select Players</string>
+    <string name="howToAddPlayer">
+        Add player to current game using Add Player button.</string>
+    <string name="howToCreatePlayer">
+        Create new player using Create Player button.</string>
+    <string name="select_players">Select a Player</string>
+    <string name="enterFirstName">Enter First Name</string>
+    <string name="enterLastName">Enter Last Name</string>
+`   <string name="enterHandicap">Enter Current Handicap</string>
+    <string name="addGolfer">Add Player</string>
+    <string name="createGolfer">Create Player</string>
+    <string name="saveGolfer">Save New Player to List</string>
+    <string name="showPlayers">(PLAYER ADD REQUIRED)</string>
+    <string name="getCourse">Get Course</string>
+
+
+    <string name="instructions2">Please Select a Course</string>
+    <string name="addingCourse">
+        Add course to current game using Add Course button.</string>
+    <string name="creatingCourse">
+        Create new course using Create Course button.</string>
+    <string name="select_course">Select a Course</string>
+    <string name="addCourse">Add Course</string>
+    <string name="createCourse">Create Course</string>
+    <string name="showCourse">(COURSE ADD REQUIRED)</string>
+    <string name="startRound">Start Round</string>
+
+
+    <string name="instructions3">Add Course Data</string>
+    <string name="instructions4">1. Complete all fields</string>
+    <string name="instructions5">2. Enter Course Length</string>
+    <string name="instructions6">3. Enter Par For Each Hole</string>
+    <string name="enterCourseName">Enter Course Name</string>
+    <string name="enterCourseDiff">Enter Course Rating (Difficulty)</string>
+    <string name="enterCourseSlope">Enter Course Slope</string>
+    <string name="pick_holes">Select Number of Holes</string>
+    <string-array name="numberOfHoles">
+        <item />
+        <item>9</item>
+        <item>18</item>
+    </string-array>
+    <string name="hole">Hole</string>
+    <string name="par">Par</string>
+    <string name="handicap">Handicap</string>
+    <string name="par_input">?</string>
+    <string name="acceptCourse">Save Course</string>
+
+    <string name="playStart">Your Round Has Started!</string>
+    <string name="course">(SELECTED COURSE)</string>
+    <string name="rating_slope">(COURSE RATING/SLOPE)</string>
+    <string name="scoring">Enter Score For Each Player Below</string>
+    <string name="hCap">H\'CAP</string>
+    <string name="netScore">ADJUSTED</string>
+    <string name="player1">A</string>
+    <string name="player2">B</string>
+    <string name="player3">C</string>
+    <string name="player4">D</string>
+    <string name="showPlayer1">(PLAYER 1)</string>
+    <string name="showPlayer2">(PLAYER 2)</string>
+    <string name="showPlayer3">(PLAYER 3)</string>
+    <string name="showPlayer4">(PLAYER 4)</string>
+    <string name="out">OUT</string>
+    <string name="goToSave">FINISH GAME</string>
+
+    <string name="playEnd">Your Round is Finished!</string>
+    <string name="resultsP1">PLAYER 1 RESULTS:</string>
+    <string name="nameP1">(NAME OF PLAYER 1)</string>
+    <string name="scoreP1">(PLAYER 1 SCORING)</string>
+    <string name="resultsP2">PLAYER 2 RESULTS:</string>
+    <string name="nameP2">(NAME OF PLAYER 2)</string>
+    <string name="scoreP2">(PLAYER 2 SCORING)</string>
+    <string name="resultsP3">PLAYER 3 RESULTS:</string>
+    <string name="nameP3">(NAME OF PLAYER 3)</string>
+    <string name="scoreP3">(PLAYER 3 SCORING)</string>
+    <string name="resultsP4">PLAYER 4 RESULTS:</string>
+    <string name="nameP4">(NAME OF PLAYER 4)</string>
+    <string name="scoreP4">(PLAYER 4 SCORING)</string>
+    <string name="saveInstructions">Push to Save Scoring to Golfer Profiles</string>
+    <string name="saveFinish">SAVE AND FINISH</string>
+
+</resources>

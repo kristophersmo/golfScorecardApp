@@ -1,0 +1,14 @@
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/text4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:hint="@string/pick_holes"
+    android:padding="5dp"
+    android:textColor="@color/white"
+    android:textColorHint="@color/white"
+    android:textSize="16sp"
+    android:textAlignment="textStart"
+    android:textStyle="normal"
+    android:scrollbarAlwaysDrawVerticalTrack="true"/>

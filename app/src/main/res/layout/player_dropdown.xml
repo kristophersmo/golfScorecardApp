@@ -1,0 +1,14 @@
+<CheckedTextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text2"
+    style="?android.attr/spinnerDropDownItemStyle"
+    android:maxLines="1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="20dp"
+    android:textSize="22sp"
+    android:hint="@string/select_players"
+    android:text="@string/select_players"
+    android:textAlignment="viewStart"
+    android:ellipsize="marquee"
+    android:textColor="#FFFFFF"/>
