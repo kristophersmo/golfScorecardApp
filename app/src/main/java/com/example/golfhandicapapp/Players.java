@@ -65,13 +65,14 @@ public class Players extends AppCompatActivity implements OnItemSelectedListener
         // KEEP PLAYER DROP-DOWN MENU UPDATED USING PLAYERS DB
         refreshPlayerMenu(golferDB);
 
+        // WAIT FOR USER TO SELECT A PLAYER FROM THE LIST
         spinner_players.setOnItemSelectedListener(this);
 
 
         // ON-CLICK, GET THE SELECTED PLAYER'S HANDICAP AND ADD PLAYER TO ROSTER
         // 1. INCREMENT THE PLAYER COUNT AND ASSIGN PLAYER TO STRING curPlayer
         // 2. USE THIS CURRENT PLAYER STRING TO SEARCH THE GOLFER DB
-        // 3. AFTER FINDING THE PLAYER, GET THE HANDICAP AND ADD TO THE HANDICAP ARRAY LIST
+        // 3. AFTER FINDING THE PLAYER, GET THE HANDICAP AND ADD IT TO THE HANDICAP ARRAYLIST
         add.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -129,6 +130,9 @@ public class Players extends AppCompatActivity implements OnItemSelectedListener
 
 
         // ON-CLICK, SAVE NEW GOLFER TO GOLFER DB
+        // 1. STORE STRINGS ENTERED IN GOLFER INPUT FIELDS
+        // 2. VERIFY NON-NULL INPUT REQUIREMENTS BEFORE WRITING TO GOLFER DB
+        // 3. IF OK, CONVERT HANDICAP STRING TO INT AND CALL saveGolferData() IN GOLFER DATABASE
         save.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -138,17 +142,14 @@ public class Players extends AppCompatActivity implements OnItemSelectedListener
                 String lName = lastName.getText().toString();
                 String hCap = handicap.getText().toString();
 
-                // VERIFY NON-NULL INPUT REQUIREMENTS BEFORE WRITING TO GOLFER DB
-                // IF OK, CONVERT HANDICAP STRING TO INT AND CALL saveGolferData() IN GOLFER DATABASE
                 if (fName.matches("") || lName.matches("") || hCap.matches(""))
                 {
                     Toast.makeText(getApplicationContext(), "PLEASE COMPLETE ALL FIELDS", Toast.LENGTH_LONG).show();
                 }
                 else
                 {
-                    // CONVERT HANDICAP VALUE TO TYPE INT THEN WRITE TO GOLFER DB
                     int golferHandicap = parseInt(hCap);
-                    golferDB.saveGolferData(fName, lName, golferHandicap);
+                    golferDB.saveGolferData(fName, lName, golferHandicap);  // WRITE TO GOLFER DB
                     Toast.makeText(getApplicationContext(), "PLAYER ADD SUCCESSFUL", Toast.LENGTH_SHORT).show();
 
                     refreshPlayerMenu(golferDB);  // UPDATE SPINNER DROP-DOWN MENU
@@ -166,7 +167,7 @@ public class Players extends AppCompatActivity implements OnItemSelectedListener
         });
 
 
-        // ON-CLICK, ACCEPT ALL PLAYER SELECTIONS AND SEND DATA TO NEXT ACTIVITY (COURSE.CLASS)
+        // ON-CLICK, ACCEPT ALL PLAYER SELECTIONS, SEND DATA TO NEXT ACTIVITY (COURSE.CLASS)
         next.setOnClickListener(new View.OnClickListener()
         {
             @Override

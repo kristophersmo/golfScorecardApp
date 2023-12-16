@@ -9,7 +9,6 @@ import android.database.sqlite.SQLiteQueryBuilder;
 import androidx.annotation.Nullable;
 import java.util.ArrayList;
 
-
 public class DatabaseCourses extends SQLiteOpenHelper
 {
     private static final String DATABASE_NAME = "courseDB";

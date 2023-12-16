@@ -1,6 +1,5 @@
 package com.example.golfhandicapapp;
 
-import static java.lang.Math.round;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -16,9 +15,11 @@ import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.util.Objects;
 import com.google.android.material.textfield.TextInputLayout;
 import java.util.ArrayList;
-import java.util.Objects;
+import static java.lang.Math.round;
+
 
 public class CourseInput extends AppCompatActivity implements OnItemSelectedListener
 {
@@ -97,11 +98,16 @@ public class CourseInput extends AppCompatActivity implements OnItemSelectedList
             public void onClick(View view)
             {
                 String name = String.valueOf(Objects.requireNonNull(courseName.getEditText()).getText());
-                // FORMATTING COURSE DIFFICULTY AND SLOPE TO ONE DECIMAL PLACE
+
+                // FORMATTING COURSE DIFFICULTY TO ONE DECIMAL PLACE
                 double rawDifficulty = Double.parseDouble(String.valueOf(Objects.requireNonNull(courseRating.getEditText()).getText()));
                 double difficulty = Math.round(rawDifficulty * 10.0) / 10.0;
+
+                // FORMATTING COURSE SLOPE TO ONE DECIMAL PLACE
                 double rawSlope = Double.parseDouble(String.valueOf(Objects.requireNonNull(courseSlope.getEditText()).getText()));
                 double slope = Math.round(rawSlope * 10.0) / 10.0;
+
+                // GETTING INT VALUES FROM USER INPUT
                 int holes = Integer.parseInt(curHoles);
                 int par1 = Integer.parseInt(par_1.getText().toString());
                 int par2 = Integer.parseInt(par_2.getText().toString());
@@ -161,7 +167,7 @@ public class CourseInput extends AppCompatActivity implements OnItemSelectedList
     }
 
 
-    // THIS FUNCTION DISPLAYS THE DESIRED COURSE INPUT TABLES BASED ON THE NUMBER OF HOLES SELECTED
+    // DISPLAYS THE DESIRED COURSE INPUT TABLES BASED ON THE NUMBER OF HOLES SELECTED
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int pos, long l)
     {

@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity" >
 
     <TextView
         android:id="@+id/top_title"
@@ -19,7 +19,7 @@
         android:textSize="24sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textAlignment="center"/>
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/resultsP1"
@@ -32,7 +32,7 @@
         android:textSize="22sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textAlignment="center"/>
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/nameP1"
@@ -45,7 +45,7 @@
         android:textSize="18sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textAlignment="center"/>
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/scoreP1"
@@ -58,7 +58,7 @@
         android:textSize="18sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textAlignment="center"/>
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/resultsP2"
@@ -71,7 +71,7 @@
         android:textSize="22sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textAlignment="center"/>
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/nameP2"
@@ -84,7 +84,7 @@
         android:textSize="18sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textAlignment="center"/>
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/scoreP2"
@@ -97,7 +97,7 @@
         android:textSize="18sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textAlignment="center"/>
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/resultsP3"
@@ -110,7 +110,7 @@
         android:textSize="22sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textAlignment="center"/>
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/nameP3"
@@ -123,7 +123,7 @@
         android:textSize="18sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textAlignment="center"/>
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/scoreP3"
@@ -136,7 +136,7 @@
         android:textSize="18sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textAlignment="center"/>
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/resultsP4"
@@ -149,7 +149,7 @@
         android:textSize="22sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textAlignment="center"/>
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/nameP4"
@@ -162,7 +162,7 @@
         android:textSize="18sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textAlignment="center"/>
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/scoreP4"
@@ -175,15 +175,15 @@
         android:textSize="18sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textAlignment="center"/>
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/saveInstructions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/saveResults"
+        android:layout_below="@id/scoreP4"
+        android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="5dp"
         android:text="@string/saveInstructions"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -194,17 +194,41 @@
         android:id="@+id/saveResults"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@id/saveInstructions"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp"
-        android:paddingVertical="20dp"
         android:backgroundTint="@color/green"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/white"
         android:text="@string/saveFinish"
-        android:padding="20dp"/>
+        android:paddingVertical="15dp"
+        android:paddingHorizontal="20dp" />
 
+    <TextView
+        android:id="@+id/saveInstructions2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/saveResults"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="@string/endInstructions"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="normal" />
 
+    <Button
+        android:id="@+id/killResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/saveInstructions2"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/red"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="@string/discardFinish"
+        android:paddingVertical="15dp"
+        android:paddingHorizontal="20dp" />
 
 </RelativeLayout>

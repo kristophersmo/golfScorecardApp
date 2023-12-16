@@ -68,6 +68,7 @@ public class Course extends AppCompatActivity implements AdapterView.OnItemSelec
         activeHandicaps = intent.getIntegerArrayListExtra("handicaps");
         displayPlayers();
 
+        // WAIT FOR USER TO SELECT A COURSE FROM THE LIST
         spinner_courses.setOnItemSelectedListener(this);
 
 
@@ -158,7 +159,7 @@ public class Course extends AppCompatActivity implements AdapterView.OnItemSelec
 
 
     // THIS FUNCTION FETCHES A LIST OF PAR VALUES FROM THE SELECTED COURSE
-    // USES CUSTOM TABLE SEARCH TO LOCATE courseName COLUMN WITHIN THE courses TABLE
+    // USES CUSTOM TABLE SEARCH TO LOCATE courseName COLUMN WITHIN courses TABLE
     // THE CURRENT COURSE IS PASSED TO THIS METHOD AND TARGETED IN THE COURSE DB SEARCH
     // RESULTS ARE COLLECTED AND ASSIGNED TO THE PAR ARRAYLIST
     private void storeCourseInfo(String gameCourse)

@@ -1,13 +1,9 @@
 package com.example.golfhandicapapp;
 
-import static java.lang.Math.round;
-import static java.lang.String.valueOf;
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 

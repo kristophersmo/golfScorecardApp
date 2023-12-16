@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity" >
 
     <TextView
         android:id="@+id/instruction"
@@ -19,7 +19,7 @@
         android:textSize="24sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textAlignment="viewStart">
+        android:textAlignment="viewStart" >
     </TextView>
 
     <TextView
@@ -34,7 +34,7 @@
         android:textSize="18sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textAlignment="viewStart">
+        android:textAlignment="viewStart" >
     </TextView>
 
     <TextView
@@ -49,7 +49,7 @@
         android:textSize="18sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textAlignment="viewStart">
+        android:textAlignment="viewStart" >
     </TextView>
 
     <TextView
@@ -65,7 +65,7 @@
         android:textColor="@color/white"
         android:textStyle="bold"
         android:textAlignment="viewStart"
-        android:visibility="invisible">
+        android:visibility="invisible" >
     </TextView>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -78,14 +78,14 @@
         android:layout_marginBottom="0dp"
         android:layout_marginStart="60dp"
         android:hint="@string/enterCourseName"
-        android:background="@null">
+        android:background="@null" >
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/in_courseName"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:inputType="textCapCharacters"
             android:textSize="16sp"
-            android:textAllCaps="true"/>
+            android:textAllCaps="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -97,13 +97,13 @@
         android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"
         android:layout_marginStart="60dp"
-        android:hint="@string/enterCourseDiff">
+        android:hint="@string/enterCourseDiff" >
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/in_courseDifficulty"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:inputType="numberDecimal"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -115,24 +115,24 @@
         android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"
         android:layout_marginStart="60dp"
-        android:hint="@string/enterCourseSlope">
+        android:hint="@string/enterCourseSlope" >
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:inputType="numberDecimal"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Spinner
         android:id="@+id/holesDD"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_below="@id/instruction3"
         android:layout_alignParentStart="true"
         android:layout_marginTop="15dp"
         android:layout_marginStart="60dp"
         android:spinnerMode="dropdown"
-        android:prompt="@string/pick_holes">
+        android:prompt="@string/pick_holes" >
     </Spinner>
 
     <Button
@@ -148,13 +148,13 @@
         android:textSize="16sp"
         android:textStyle="bold"
         android:textColor="@color/white"
-        android:text="@string/acceptCourse"/>
+        android:text="@string/acceptCourse" />
 
     <TableLayout
         android:id="@+id/tableLayout1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/instruction4">
+        android:layout_below="@id/instruction4" >
 
         <TableRow
             android:id="@+id/row1"
@@ -162,7 +162,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
             android:weightSum="1"
-            android:visibility="invisible">
+            android:visibility="invisible" >
             <TextView
                 android:background="@drawable/cell_design_holes"
                 android:layout_weight="0.075"
@@ -174,125 +174,124 @@
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
-                android:padding="3dp"/>
+                android:padding="3dp" />
             <TextView
                 android:background="@drawable/cell_design_holes"
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="1"
+                android:text="@string/one"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/black"
-                android:padding="3dp"/>
+                android:padding="3dp" />
             <TextView
                 android:background="@drawable/cell_design_holes"
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="2"
+                android:text="@string/two"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/black"
-                android:padding="3dp"/>
+                android:padding="3dp" />
             <TextView
                 android:background="@drawable/cell_design_holes"
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="3"
+                android:text="@string/three"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/black"
-                android:padding="3dp"/>
+                android:padding="3dp" />
             <TextView
                 android:background="@drawable/cell_design_holes"
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="4"
+                android:text="@string/four"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/black"
-                android:padding="3dp"/>
+                android:padding="3dp" />
             <TextView
                 android:background="@drawable/cell_design_holes"
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="5"
+                android:text="@string/five"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/black"
-                android:padding="3dp"/>
+                android:padding="3dp" />
             <TextView
                 android:background="@drawable/cell_design_holes"
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="6"
+                android:text="@string/six"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/black"
-                android:padding="3dp"/>
+                android:padding="3dp" />
             <TextView
                 android:background="@drawable/cell_design_holes"
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="7"
+                android:text="@string/seven"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/black"
-                android:padding="3dp"/>
+                android:padding="3dp" />
             <TextView
                 android:background="@drawable/cell_design_holes"
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="8"
+                android:text="@string/eight"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/black"
-                android:padding="3dp"/>
+                android:padding="3dp" />
             <TextView
                 android:background="@drawable/cell_design_holes"
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="9"
+                android:text="@string/nine"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/black"
-                android:padding="3dp"/>
+                android:padding="3dp" />
         </TableRow>
 
         <TableRow
             android:id="@+id/row2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/row1"
             android:layout_marginTop="0dp"
             android:weightSum="1"
-            android:visibility="invisible">
+            android:visibility="invisible" >
             <TextView
                 android:background="@drawable/cell_design_input"
                 android:layout_weight="0.075"
@@ -304,7 +303,7 @@
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
-                android:padding="3dp"/>
+                android:padding="3dp" />
             <EditText
                 android:id="@+id/parHole1"
                 android:background="@drawable/cell_design_input"
@@ -313,12 +312,13 @@
                 android:layout_height="match_parent"
                 android:inputType="number"
                 android:hint="@string/par_input"
+                android:autofillHints=""
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
                 android:textSize="18sp"
-                android:padding="3dp">
+                android:padding="3dp" >
             </EditText>
             <EditText
                 android:id="@+id/parHole2"
@@ -328,12 +328,13 @@
                 android:layout_height="match_parent"
                 android:inputType="number"
                 android:hint="@string/par_input"
+                android:autofillHints=""
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
                 android:textSize="18sp"
-                android:padding="3dp">
+                android:padding="3dp" >
             </EditText>
             <EditText
                 android:id="@+id/parHole3"
@@ -343,12 +344,13 @@
                 android:layout_height="match_parent"
                 android:inputType="number"
                 android:hint="@string/par_input"
+                android:autofillHints=""
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
                 android:textSize="18sp"
-                android:padding="3dp">
+                android:padding="3dp" >
             </EditText>
             <EditText
                 android:id="@+id/parHole4"
@@ -358,12 +360,13 @@
                 android:layout_height="match_parent"
                 android:inputType="number"
                 android:hint="@string/par_input"
+                android:autofillHints=""
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
                 android:textSize="18sp"
-                android:padding="3dp">
+                android:padding="3dp" >
             </EditText>
             <EditText
                 android:id="@+id/parHole5"
@@ -373,12 +376,13 @@
                 android:layout_height="match_parent"
                 android:inputType="number"
                 android:hint="@string/par_input"
+                android:autofillHints=""
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
                 android:textSize="18sp"
-                android:padding="3dp">
+                android:padding="3dp" >
             </EditText>
             <EditText
                 android:id="@+id/parHole6"
@@ -388,12 +392,13 @@
                 android:layout_height="match_parent"
                 android:inputType="number"
                 android:hint="@string/par_input"
+                android:autofillHints=""
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
                 android:textSize="18sp"
-                android:padding="3dp">
+                android:padding="3dp" >
             </EditText>
             <EditText
                 android:id="@+id/parHole7"
@@ -403,12 +408,13 @@
                 android:layout_height="match_parent"
                 android:inputType="number"
                 android:hint="@string/par_input"
+                android:autofillHints=""
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
                 android:textSize="18sp"
-                android:padding="3dp">
+                android:padding="3dp" >
             </EditText>
             <EditText
                 android:id="@+id/parHole8"
@@ -418,12 +424,13 @@
                 android:layout_height="match_parent"
                 android:inputType="number"
                 android:hint="@string/par_input"
+                android:autofillHints=""
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
                 android:textSize="18sp"
-                android:padding="3dp">
+                android:padding="3dp" >
             </EditText>
             <EditText
                 android:id="@+id/parHole9"
@@ -433,12 +440,13 @@
                 android:layout_height="match_parent"
                 android:inputType="number"
                 android:hint="@string/par_input"
+                android:autofillHints=""
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
                 android:textSize="18sp"
-                android:padding="3dp">
+                android:padding="3dp" >
             </EditText>
         </TableRow>
 
@@ -446,10 +454,9 @@
             android:id="@+id/row3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/row2"
             android:layout_marginTop="25dp"
             android:weightSum="1"
-            android:visibility="invisible">
+            android:visibility="invisible" >
             <TextView
                 android:background="@drawable/cell_design_holes"
                 android:layout_weight="0.075"
@@ -461,126 +468,125 @@
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
-                android:padding="3dp"/>
+                android:padding="3dp" />
             <TextView
                 android:background="@drawable/cell_design_holes"
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="10"
+                android:text="@string/ten"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/black"
-                android:padding="3dp"/>
+                android:padding="3dp" />
             <TextView
                 android:background="@drawable/cell_design_holes"
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="11"
+                android:text="@string/eleven"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/black"
-                android:padding="3dp"/>
+                android:padding="3dp" />
             <TextView
                 android:background="@drawable/cell_design_holes"
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="12"
+                android:text="@string/twelve"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/black"
-                android:padding="3dp"/>
+                android:padding="3dp" />
             <TextView
                 android:background="@drawable/cell_design_holes"
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="13"
+                android:text="@string/thirteen"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/black"
-                android:padding="3dp"/>
+                android:padding="3dp" />
             <TextView
                 android:background="@drawable/cell_design_holes"
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="14"
+                android:text="@string/fourteen"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/black"
-                android:padding="3dp"/>
+                android:padding="3dp" />
             <TextView
                 android:background="@drawable/cell_design_holes"
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="15"
+                android:text="@string/fifteen"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/black"
-                android:padding="3dp"/>
+                android:padding="3dp" />
             <TextView
                 android:background="@drawable/cell_design_holes"
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="16"
+                android:text="@string/sixteen"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/black"
-                android:padding="3dp"/>
+                android:padding="3dp" />
             <TextView
                 android:background="@drawable/cell_design_holes"
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:text="17"
+                android:text="@string/seventeen"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/black"
-                android:padding="3dp"/>
+                android:padding="3dp" />
             <TextView
                 android:background="@drawable/cell_design_holes"
                 android:layout_weight="0.1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginEnd="0dp"
-                android:text="18"
+                android:text="@string/eighteen"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/black"
-                android:padding="3dp"/>
+                android:padding="3dp" />
         </TableRow>
 
         <TableRow
             android:id="@+id/row4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/row3"
             android:layout_marginTop="0dp"
             android:weightSum="1"
-            android:visibility="invisible">
+            android:visibility="invisible" >
             <TextView
                 android:background="@drawable/cell_design_input"
                 android:layout_weight="0.075"
@@ -592,7 +598,7 @@
                 android:textAllCaps="true"
                 android:textStyle="bold"
                 android:textSize="18sp"
-                android:padding="3dp"/>
+                android:padding="3dp" />
             <EditText
                 android:id="@+id/parHole10"
                 android:background="@drawable/cell_design_input"
@@ -601,12 +607,13 @@
                 android:layout_height="match_parent"
                 android:inputType="number"
                 android:hint="@string/par_input"
+                android:autofillHints=""
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
                 android:textSize="18sp"
-                android:padding="3dp">
+                android:padding="3dp" >
             </EditText>
             <EditText
                 android:id="@+id/parHole11"
@@ -616,12 +623,13 @@
                 android:layout_height="match_parent"
                 android:inputType="number"
                 android:hint="@string/par_input"
+                android:autofillHints=""
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
                 android:textSize="18sp"
-                android:padding="3dp">
+                android:padding="3dp" >
             </EditText>
             <EditText
                 android:id="@+id/parHole12"
@@ -631,12 +639,13 @@
                 android:layout_height="match_parent"
                 android:inputType="number"
                 android:hint="@string/par_input"
+                android:autofillHints=""
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
                 android:textSize="18sp"
-                android:padding="3dp">
+                android:padding="3dp" >
             </EditText>
             <EditText
                 android:id="@+id/parHole13"
@@ -646,12 +655,13 @@
                 android:layout_height="match_parent"
                 android:inputType="number"
                 android:hint="@string/par_input"
+                android:autofillHints=""
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
                 android:textSize="18sp"
-                android:padding="3dp">
+                android:padding="3dp" >
             </EditText>
             <EditText
                 android:id="@+id/parHole14"
@@ -661,12 +671,13 @@
                 android:layout_height="match_parent"
                 android:inputType="number"
                 android:hint="@string/par_input"
+                android:autofillHints=""
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
                 android:textSize="18sp"
-                android:padding="3dp">
+                android:padding="3dp" >
             </EditText>
             <EditText
                 android:id="@+id/parHole15"
@@ -676,12 +687,13 @@
                 android:layout_height="match_parent"
                 android:inputType="number"
                 android:hint="@string/par_input"
+                android:autofillHints=""
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
                 android:textSize="18sp"
-                android:padding="3dp">
+                android:padding="3dp" >
             </EditText>
             <EditText
                 android:id="@+id/parHole16"
@@ -691,12 +703,13 @@
                 android:layout_height="match_parent"
                 android:inputType="number"
                 android:hint="@string/par_input"
+                android:autofillHints=""
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
                 android:textSize="18sp"
-                android:padding="3dp">
+                android:padding="3dp" >
             </EditText>
             <EditText
                 android:id="@+id/parHole17"
@@ -706,12 +719,13 @@
                 android:layout_height="match_parent"
                 android:inputType="number"
                 android:hint="@string/par_input"
+                android:autofillHints=""
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
                 android:textSize="18sp"
-                android:padding="3dp">
+                android:padding="3dp" >
             </EditText>
             <EditText
                 android:id="@+id/parHole18"
@@ -721,13 +735,15 @@
                 android:layout_height="match_parent"
                 android:inputType="number"
                 android:hint="@string/par_input"
+                android:autofillHints=""
                 android:textColorHint="@color/black"
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
                 android:textSize="18sp"
-                android:padding="3dp">
+                android:padding="3dp" >
             </EditText>
         </TableRow>
     </TableLayout>
+
 </RelativeLayout>

@@ -1,15 +1,15 @@
 package com.example.golfhandicapapp;
 
-import static java.lang.Math.round;
-import static java.lang.String.valueOf;
-import android.annotation.SuppressLint;
-import android.content.Intent;
-import android.os.Bundle;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
+import android.os.Bundle;
 import java.util.ArrayList;
+import android.annotation.SuppressLint;
+import static java.lang.Math.round;
+import static java.lang.String.valueOf;
 import android.widget.Toast;
 
 public class StartRound extends AppCompatActivity
@@ -19,7 +19,7 @@ public class StartRound extends AppCompatActivity
     TextView allPars;  // HOLDS THE TOTAL SUM OF ALL PARS
     TextView totalP1Score, totalP2Score, totalP3Score, totalP4Score;  // TOTAL SCORE FOR EACH PLAYER
     TextView courseHCap1, courseHCap2, courseHCap3, courseHCap4;  // HOLDS THE COURSE HANDICAP PER PLAYER
-    Button finishGame;  // BUTTON TO COMPLETE THE SCORECARD AND FINISH THE GAME
+    Button getScores, finishGame;  // BUTTON TO COMPLETE THE SCORECARD AND FINISH THE GAME
     ArrayList<String> activePlayers;  // ARRAYLIST TO HOLD GOLFERS IN CURRENT GAME
     ArrayList<String> activeCourse;  // ARRAYLIST TO HOLD COURSE IN CURRENT GAME
     ArrayList<Integer> activeHandicaps;  // ARRAYLIST TO HOLD GOLFER HANDICAPS IN CURRENT GAME
@@ -48,6 +48,7 @@ public class StartRound extends AppCompatActivity
         player3 = findViewById(R.id.showPlayer3);
         player4 = findViewById(R.id.showPlayer4);
         finishGame = findViewById(R.id.finish);
+        getScores = findViewById(R.id.getScores);
         allPars = findViewById(R.id.totalPar);
         courseHCap1 = findViewById(R.id.courseHCap1);
         courseHCap2 = findViewById(R.id.courseHCap2);
@@ -63,7 +64,6 @@ public class StartRound extends AppCompatActivity
         Intent intent = getIntent();
         Bundle bundle = getIntent().getExtras();
         assert bundle != null;
-
         activePlayers = intent.getStringArrayListExtra("players");
         activeHandicaps = intent.getIntegerArrayListExtra("handicaps");
         activeCourse = intent.getStringArrayListExtra("course");
@@ -87,6 +87,17 @@ public class StartRound extends AppCompatActivity
         // Toast.makeText(getApplicationContext(), activeHandicaps.toString(), Toast.LENGTH_SHORT).show();
         // Toast.makeText(getApplicationContext(), activeCourse.toString(), Toast.LENGTH_SHORT).show();
         // Toast.makeText(getApplicationContext(), activePars.toString(), Toast.LENGTH_SHORT).show();
+
+
+        // ON-CLICK, ONLY TALLY THE SCORECARD RESULTS
+        getScores.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                tallyResults();
+            }
+        });
 
 
         // ON-CLICK, TALLY SCORECARD RESULTS AND FINISH THE GAME
@@ -170,7 +181,8 @@ public class StartRound extends AppCompatActivity
     // 1. CREATE INT ARRAY OF SIZE 'NUMBER OF PAR INPUT FIELDS'
     // 2. INSIDE LOOP, CREATE TEMP TEXTVIEW TO REPRESENT THE CURRENT PAR FIELD
     // 3. INSIDE LOOP, ADD ASSOCIATED VALUE FROM ARRAYLIST PARS TO THE CURRENT FIELD
-    // 4. INSIDE LOOP, ADD CURRENT PAR TO CUMULATIVE TOTAL PARS, DISPLAY TOTAL AT END OF LOOP
+    // 4. INSIDE LOOP, ADD CURRENT PAR TO CUMULATIVE TOTAL PARS
+    // 5. DISPLAY TOTAL AT END OF LOOP
     private void fillPars(int totalParValue)
     {
         int[] parArray = new int[] {R.id.parHole1, R.id.parHole2, R.id.parHole3, R.id.parHole4,
@@ -196,7 +208,6 @@ public class StartRound extends AppCompatActivity
     // 5. LOOPS ONCE FOR EACH ACTIVE PLAYER
 
     // COURSE HANDICAP = [Handicap Index * (courseSlope / 113)] + (courseRating - Par)  *TO NEAREST WHOLE NUMBER*
-    // ROUND DIFFERENTIAL = (Adjusted Gross Score - courseRating) * 113 / courseSlope
     @SuppressLint("SetTextI18n")
     private void calcHandicaps(int totalParValue)
     {
@@ -220,7 +231,12 @@ public class StartRound extends AppCompatActivity
     // 3. LOOP THROUGH SCORING COLUMN VALUES AND ADD TO CUMULATIVE SCORE (ADD SCORES IN COLUMN)
     private void tallyResults()
     {
-        totalP1Score = findViewById(R.id.totalScore1);
+        finalScoreP1 = 0;  // RESET FINAL SCORE VALUES BEFORE CALCULATING
+        finalScoreP2 = 0;
+        finalScoreP3 = 0;
+        finalScoreP4 = 0;
+
+        totalP1Score = findViewById(R.id.totalScore1);  // DEFINE LAYOUT ITEMS
         totalP2Score = findViewById(R.id.totalScore2);
         totalP3Score = findViewById(R.id.totalScore3);
         totalP4Score = findViewById(R.id.totalScore4);

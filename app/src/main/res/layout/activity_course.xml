@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity" >
 
     <TextView
         android:id="@+id/instruction"
@@ -19,7 +19,7 @@
         android:textSize="24sp"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textAlignment="center"/>
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/howToAddCourse"
@@ -32,7 +32,7 @@
         android:textSize="16sp"
         android:textColor="@color/white"
         android:textStyle="normal"
-        android:textAlignment="center"/>
+        android:textAlignment="center" />
 
     <TextView
         android:id="@+id/howToCreateCourse"
@@ -45,7 +45,7 @@
         android:textSize="16sp"
         android:textColor="@color/white"
         android:textStyle="normal"
-        android:textAlignment="center"/>
+        android:textAlignment="center" />
 
     <Spinner
         android:id="@+id/courseDD"
@@ -57,7 +57,7 @@
         android:layout_marginTop="10dp"
         android:spinnerMode="dialog"
         android:prompt="@string/select_course"
-        android:background="@color/faint_blue"/>
+        android:background="@color/faint_blue" />
 
     <Button
         android:id="@+id/addCourse"
@@ -73,7 +73,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:text="@string/addCourse"/>
+        android:text="@string/addCourse" />
 
     <Button
         android:id="@+id/createCourse"
@@ -89,7 +89,7 @@
         android:textSize="18sp"
         android:textStyle="bold"
         android:textColor="@color/black"
-        android:text="@string/createCourse"/>
+        android:text="@string/createCourse" />
 
     <Button
         android:id="@+id/accept"
@@ -104,7 +104,7 @@
         android:textStyle="bold"
         android:textColor="@color/white"
         android:text="@string/startRound"
-        android:visibility="invisible"/>
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/playerList"
@@ -118,7 +118,7 @@
         android:text="@string/showPlayers"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/courseList"
@@ -132,7 +132,7 @@
         android:text="@string/showCourse"
         android:textAlignment="center"
         android:textSize="20sp"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white" />
 
     <TextView
         android:id="@+id/pars"
@@ -145,6 +145,6 @@
         android:layout_marginEnd="10dp"
         android:text=""
         android:textAlignment="center"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
 </RelativeLayout>
