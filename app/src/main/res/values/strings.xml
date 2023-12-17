@@ -65,6 +65,7 @@
     <string name="eighteen">18</string>
     <string name="hole">Hole</string>
     <string name="par">Par</string>
+    <string name="difficulty">Difficulty</string>
     <string name="handicap">Handicap</string>
     <string name="par_input">?</string>
     <string name="acceptCourse">Save Course</string>
@@ -74,6 +75,7 @@
     <string name="course">(SELECTED COURSE)</string>
     <string name="rating_slope">(COURSE RATING/SLOPE)</string>
     <string name="scoring">Enter Score For Each Player Below</string>
+    <string name="holeDifficulty">DIFF</string>
     <string name="hCap">H\'CAP</string>
     <string name="netScore">ADJUSTED</string>
     <string name="player1">A</string>
@@ -84,6 +86,7 @@
     <string name="showPlayer2">(PLAYER 2)</string>
     <string name="showPlayer3">(PLAYER 3)</string>
     <string name="showPlayer4">(PLAYER 4)</string>
+    <string name="rangeDiff">1-18</string>
     <string name="out">OUT</string>
     <string name="goToSave">FINISH GAME</string>
 

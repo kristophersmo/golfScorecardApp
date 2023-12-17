@@ -6,9 +6,8 @@
     android:fillViewport="true">
 
 <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:fitsSystemWindows="true"
     android:theme="@style/Theme.AppCompat.NoActionBar"
     tools:context=".MainActivity" >
@@ -85,9 +84,9 @@
                 android:id="@+id/labelHoles"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:background="@drawable/cell_design_holes"
-                android:paddingHorizontal="15dp"
+                android:paddingHorizontal="10dp"
                 android:paddingVertical="2dp"
                 android:text="@string/hole"
                 android:textAlignment="center"
@@ -101,9 +100,23 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/cell_design_input"
-                android:paddingHorizontal="15dp"
+                android:paddingHorizontal="11dp"
                 android:paddingVertical="2dp"
                 android:text="@string/par"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/labelDifficulty"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_design_input"
+                android:paddingHorizontal="11dp"
+                android:paddingVertical="2dp"
+                android:text="@string/holeDifficulty"
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textColor="@color/black"
@@ -192,7 +205,7 @@
                 android:id="@+id/hole1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:background="@drawable/cell_design_holes"
                 android:padding="3dp"
                 android:text="@string/one"
@@ -204,6 +217,17 @@
 
             <TextView
                 android:id="@+id/parHole1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_design_input"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/diffHole1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/cell_design_input"
@@ -286,7 +310,7 @@
                 android:id="@+id/hole2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:background="@drawable/cell_design_holes"
                 android:padding="3dp"
                 android:text="@string/two"
@@ -298,6 +322,17 @@
 
             <TextView
                 android:id="@+id/parHole2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_design_input"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/diffHole2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/cell_design_input"
@@ -380,7 +415,7 @@
                 android:id="@+id/hole3"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:background="@drawable/cell_design_holes"
                 android:padding="3dp"
                 android:text="@string/three"
@@ -392,6 +427,17 @@
 
             <TextView
                 android:id="@+id/parHole3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_design_input"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/diffHole3"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/cell_design_input"
@@ -474,7 +520,7 @@
                 android:id="@+id/hole4"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:background="@drawable/cell_design_holes"
                 android:padding="3dp"
                 android:text="@string/four"
@@ -486,6 +532,17 @@
 
             <TextView
                 android:id="@+id/parHole4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_design_input"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/diffHole4"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/cell_design_input"
@@ -568,7 +625,7 @@
                 android:id="@+id/hole5"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:background="@drawable/cell_design_holes"
                 android:padding="3dp"
                 android:text="@string/five"
@@ -580,6 +637,17 @@
 
             <TextView
                 android:id="@+id/parHole5"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_design_input"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/diffHole5"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/cell_design_input"
@@ -662,7 +730,7 @@
                 android:id="@+id/hole6"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:background="@drawable/cell_design_holes"
                 android:padding="3dp"
                 android:text="@string/six"
@@ -674,6 +742,17 @@
 
             <TextView
                 android:id="@+id/parHole6"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_design_input"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/diffHole6"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/cell_design_input"
@@ -755,7 +834,7 @@
                 android:id="@+id/hole7"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:background="@drawable/cell_design_holes"
                 android:padding="3dp"
                 android:text="@string/seven"
@@ -767,6 +846,17 @@
 
             <TextView
                 android:id="@+id/parHole7"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_design_input"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/diffHole7"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/cell_design_input"
@@ -849,7 +939,7 @@
                 android:id="@+id/hole8"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:background="@drawable/cell_design_holes"
                 android:padding="3dp"
                 android:text="@string/eight"
@@ -861,6 +951,17 @@
 
             <TextView
                 android:id="@+id/parHole8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_design_input"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/diffHole8"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/cell_design_input"
@@ -943,7 +1044,7 @@
                 android:id="@+id/hole9"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:background="@drawable/cell_design_holes"
                 android:padding="3dp"
                 android:text="@string/nine"
@@ -955,6 +1056,17 @@
 
             <TextView
                 android:id="@+id/parHole9"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_design_input"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/diffHole9"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/cell_design_input"
@@ -1038,7 +1150,7 @@
                 android:id="@+id/hole10"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:background="@drawable/cell_design_holes"
                 android:padding="3dp"
                 android:text="@string/ten"
@@ -1050,6 +1162,17 @@
 
             <TextView
                 android:id="@+id/parHole10"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_design_input"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/diffHole10"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/cell_design_input"
@@ -1138,7 +1261,7 @@
                 android:id="@+id/hole11"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:background="@drawable/cell_design_holes"
                 android:padding="3dp"
                 android:text="@string/eleven"
@@ -1150,6 +1273,17 @@
 
             <TextView
                 android:id="@+id/parHole11"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_design_input"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/diffHole11"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/cell_design_input"
@@ -1236,7 +1370,7 @@
                 android:id="@+id/hole12"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:background="@drawable/cell_design_holes"
                 android:padding="3dp"
                 android:text="@string/twelve"
@@ -1248,6 +1382,17 @@
 
             <TextView
                 android:id="@+id/parHole12"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_design_input"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/diffHole12"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/cell_design_input"
@@ -1334,7 +1479,7 @@
                 android:id="@+id/hole13"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:background="@drawable/cell_design_holes"
                 android:padding="3dp"
                 android:text="@string/thirteen"
@@ -1346,6 +1491,17 @@
 
             <TextView
                 android:id="@+id/parHole13"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_design_input"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/diffHole13"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/cell_design_input"
@@ -1432,7 +1588,7 @@
                 android:id="@+id/hole14"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:background="@drawable/cell_design_holes"
                 android:padding="3dp"
                 android:text="@string/fourteen"
@@ -1444,6 +1600,17 @@
 
             <TextView
                 android:id="@+id/parHole14"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_design_input"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/diffHole14"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/cell_design_input"
@@ -1529,7 +1696,7 @@
                 android:id="@+id/hole15"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:background="@drawable/cell_design_holes"
                 android:padding="3dp"
                 android:text="@string/fifteen"
@@ -1541,6 +1708,17 @@
 
             <TextView
                 android:id="@+id/parHole15"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_design_input"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/diffHole15"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/cell_design_input"
@@ -1623,7 +1801,7 @@
                 android:id="@+id/hole16"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:background="@drawable/cell_design_holes"
                 android:padding="3dp"
                 android:text="@string/sixteen"
@@ -1635,6 +1813,17 @@
 
             <TextView
                 android:id="@+id/parHole16"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_design_input"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/diffHole16"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/cell_design_input"
@@ -1717,7 +1906,7 @@
                 android:id="@+id/hole17"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:background="@drawable/cell_design_holes"
                 android:padding="3dp"
                 android:text="@string/seventeen"
@@ -1729,6 +1918,17 @@
 
             <TextView
                 android:id="@+id/parHole17"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_design_input"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/diffHole17"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/cell_design_input"
@@ -1811,7 +2011,7 @@
                 android:id="@+id/hole18"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:background="@drawable/cell_design_holes"
                 android:padding="3dp"
                 android:text="@string/eighteen"
@@ -1823,6 +2023,17 @@
 
             <TextView
                 android:id="@+id/parHole18"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_design_input"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/diffHole18"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@drawable/cell_design_input"
@@ -1905,7 +2116,7 @@
                 android:id="@+id/allPar"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:background="@drawable/cell_design_holes"
                 android:padding="3dp"
                 android:text="@string/out"
@@ -1927,10 +2138,22 @@
                 android:textStyle="bold" />
 
             <TextView
+                android:id="@+id/emptyDiff"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/cell_design_input"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:text="@string/rangeDiff"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/totalHCap"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@drawable/cell_design_handicap"
+                android:background="@color/background"
                 android:padding="3dp"
                 android:textAlignment="center"
                 android:textColor="@color/black"
@@ -1994,7 +2217,7 @@
                 android:id="@+id/allHandicaps"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="15dp"
                 android:background="@drawable/cell_design_out"
                 android:padding="3dp"
                 android:text="@string/hCap"
@@ -2017,6 +2240,17 @@
 
             <TextView
                 android:id="@+id/empty2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/background"
+                android:padding="3dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/empty3"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@color/background"

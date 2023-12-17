@@ -24,6 +24,7 @@ public class StartRound extends AppCompatActivity
     ArrayList<String> activeCourse;  // ARRAYLIST TO HOLD COURSE IN CURRENT GAME
     ArrayList<Integer> activeHandicaps;  // ARRAYLIST TO HOLD GOLFER HANDICAPS IN CURRENT GAME
     ArrayList<Integer> activePars;  // ARRAYLIST TO HOLD PARS IN CURRENT GAME
+    ArrayList<Integer> activeDiffs;  // ARRAYLIST TO HOLD HOLE DIFFICULTIES IN CURRENT GAME
     float courseRating, courseSlope;  // FLOATS TO HOLD THE RATING AND SLOPE IN CURRENT GAME
     int courseHoles;    // INT TO HOLD THE NUMBER OF COURSE HOLES
     int finalScoreP1 = 0;   // INITIALIZE INT TO HOLDS THE FINAL SCORE OF PLAYER 1
@@ -68,6 +69,7 @@ public class StartRound extends AppCompatActivity
         activeHandicaps = intent.getIntegerArrayListExtra("handicaps");
         activeCourse = intent.getStringArrayListExtra("course");
         activePars = intent.getIntegerArrayListExtra("pars");
+        activeDiffs = intent.getIntegerArrayListExtra("diffs");
         courseRating = bundle.getFloat("rating");
         courseSlope = bundle.getFloat("slope");
         courseHoles = bundle.getInt("holes");
@@ -78,7 +80,9 @@ public class StartRound extends AppCompatActivity
         fillRatingSlope();
         int totalParValue = 0;
         fillPars(totalParValue);
-        calcHandicaps(totalParValue);
+        fillDiffs();
+        getCourseHandicaps(totalParValue);
+        //getHoleHandicaps();
         // USER THEN ADDS A SCORE FOR EACH PLAYER/HOLE AND SELECTS 'FINISH' WHEN COMPLETE
 
 
@@ -201,16 +205,34 @@ public class StartRound extends AppCompatActivity
     }
 
 
+    // RETRIEVING THE HOLE DIFFICULTIES ASSOCIATED WITH THE SELECTED COURSE (FROM COURSE CLASS)
+    // 1. CREATE INT ARRAY OF SIZE 'NUMBER OF HOLE DIFFICULTY INPUT FIELDS'
+    // 2. INSIDE LOOP, CREATE TEMP TEXTVIEW TO REPRESENT THE CURRENT HOLE DIFFICULTY FIELD
+    // 3. INSIDE LOOP, ADD ASSOCIATED VALUE FROM ARRAYLIST DIFFS TO THE CURRENT FIELD
+    private void fillDiffs()
+    {
+        int[] diffArray = new int[] {R.id.diffHole1, R.id.diffHole2, R.id.diffHole3, R.id.diffHole4,
+                R.id.diffHole5, R.id.diffHole6, R.id.diffHole7, R.id.diffHole8, R.id.diffHole9,
+                R.id.diffHole10, R.id.diffHole11, R.id.diffHole12, R.id.diffHole13, R.id.diffHole14,
+                R.id.diffHole15, R.id.diffHole16, R.id.diffHole17, R.id.diffHole18};
+
+        for(int i = 0; i < courseHoles; i++)
+        {
+            TextView cur_diffValue = findViewById(diffArray[i]);
+            cur_diffValue.setText(String.format(String.valueOf(activeDiffs.get(i))));
+        }
+    }
+
+
     // FUNCTION TO FIND THE CALCULATED COURSE HANDICAP FOR EACH PLAYER
     // 1. CREATE INT ARRAY OF SIZE 'NUMBER OF COURSE HANDICAP FIELDS' (ONE PER PLAYER)
     // 2. USE THE SIZE OF 'ACTIVE HANDICAPS' TO LOOP EXACTLY THROUGH PLAYER COUNT ONLY
     // 3. INSIDE LOOP, CREATE TEMP TEXTVIEW TO REPRESENT THE CURRENT HANDICAP FIELD
     // 4. INSIDE LOOP, PULL CURRENT HANDICAP VALUE AND CALCULATE THE COURSE HANDICAP
     // 5. LOOPS ONCE FOR EACH ACTIVE PLAYER
-
     // COURSE HANDICAP = [Handicap Index * (courseSlope / 113)] + (courseRating - Par)  *TO NEAREST WHOLE NUMBER*
     @SuppressLint("SetTextI18n")
-    private void calcHandicaps(int totalParValue)
+    private void getCourseHandicaps(int totalParValue)
     {
         float slopeCalc = courseSlope / 113;
 

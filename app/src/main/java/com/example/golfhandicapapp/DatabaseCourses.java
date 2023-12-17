@@ -37,6 +37,24 @@ public class DatabaseCourses extends SQLiteOpenHelper
     private static final String KEY_PAR16 = "par16";
     private static final String KEY_PAR17 = "par17";
     private static final String KEY_PAR18 = "par18";
+    private static final String KEY_DIFF1 = "diff1";
+    private static final String KEY_DIFF2 = "diff2";
+    private static final String KEY_DIFF3 = "diff3";
+    private static final String KEY_DIFF4 = "diff4";
+    private static final String KEY_DIFF5 = "diff5";
+    private static final String KEY_DIFF6 = "diff6";
+    private static final String KEY_DIFF7 = "diff7";
+    private static final String KEY_DIFF8 = "diff8";
+    private static final String KEY_DIFF9 = "diff9";
+    private static final String KEY_DIFF10 = "diff10";
+    private static final String KEY_DIFF11 = "diff11";
+    private static final String KEY_DIFF12 = "diff12";
+    private static final String KEY_DIFF13 = "diff13";
+    private static final String KEY_DIFF14 = "diff14";
+    private static final String KEY_DIFF15 = "diff15";
+    private static final String KEY_DIFF16 = "diff16";
+    private static final String KEY_DIFF17 = "diff17";
+    private static final String KEY_DIFF18 = "diff18";
 
 
     // CONSTRUCT SQLITE DATABASE (COURSE DB)
@@ -56,7 +74,11 @@ public class DatabaseCourses extends SQLiteOpenHelper
                 + KEY_PAR5 + " TEXT, " + KEY_PAR6 + " TEXT, " + KEY_PAR7 + " TEXT, " + KEY_PAR8 + " TEXT, "
                 + KEY_PAR9 + " TEXT, " + KEY_PAR10 + " TEXT, " + KEY_PAR11 + " TEXT, " + KEY_PAR12 + " TEXT, "
                 + KEY_PAR13 + " TEXT, " + KEY_PAR14 + " TEXT, " + KEY_PAR15 + " TEXT, " + KEY_PAR16 + " TEXT, "
-                + KEY_PAR17 + " TEXT, " + KEY_PAR18 + " TEXT)");
+                + KEY_PAR17 + " TEXT, " + KEY_PAR18 + " TEXT, " + KEY_DIFF1 + " TEXT, " + KEY_DIFF2 + " TEXT, "
+                + KEY_DIFF3 + " TEXT, " + KEY_DIFF4 + " TEXT, " + KEY_DIFF5 + " TEXT, " + KEY_DIFF6 + " TEXT, "
+                + KEY_DIFF7 + " TEXT, " + KEY_DIFF8 + " TEXT, " + KEY_DIFF9 + " TEXT, " + KEY_DIFF10 + " TEXT, "
+                + KEY_DIFF11 + " TEXT, " + KEY_DIFF12 + " TEXT, " + KEY_DIFF13 + " TEXT, " + KEY_DIFF14 + " TEXT, "
+                + KEY_DIFF15 + " TEXT, " + KEY_DIFF16 + " TEXT, " + KEY_DIFF17 + " TEXT, " + KEY_DIFF18 + " TEXT)");
     }
 
 
@@ -92,7 +114,25 @@ public class DatabaseCourses extends SQLiteOpenHelper
             int parHole15,
             int parHole16,
             int parHole17,
-            int parHole18)
+            int parHole18,
+            int difHole1,
+            int difHole2,
+            int difHole3,
+            int difHole4,
+            int difHole5,
+            int difHole6,
+            int difHole7,
+            int difHole8,
+            int difHole9,
+            int difHole10,
+            int difHole11,
+            int difHole12,
+            int difHole13,
+            int difHole14,
+            int difHole15,
+            int difHole16,
+            int difHole17,
+            int difHole18)
     {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues dataValues = new ContentValues();
@@ -118,6 +158,24 @@ public class DatabaseCourses extends SQLiteOpenHelper
         dataValues.put(KEY_PAR16, parHole16);
         dataValues.put(KEY_PAR17, parHole17);
         dataValues.put(KEY_PAR18, parHole18);
+        dataValues.put(KEY_DIFF1, difHole1);
+        dataValues.put(KEY_DIFF2, difHole2);
+        dataValues.put(KEY_DIFF3, difHole3);
+        dataValues.put(KEY_DIFF4, difHole4);
+        dataValues.put(KEY_DIFF5, difHole5);
+        dataValues.put(KEY_DIFF6, difHole6);
+        dataValues.put(KEY_DIFF7, difHole7);
+        dataValues.put(KEY_DIFF8, difHole8);
+        dataValues.put(KEY_DIFF9, difHole9);
+        dataValues.put(KEY_DIFF10, difHole10);
+        dataValues.put(KEY_DIFF11, difHole11);
+        dataValues.put(KEY_DIFF12, difHole12);
+        dataValues.put(KEY_DIFF13, difHole13);
+        dataValues.put(KEY_DIFF14, difHole14);
+        dataValues.put(KEY_DIFF15, difHole15);
+        dataValues.put(KEY_DIFF16, difHole16);
+        dataValues.put(KEY_DIFF17, difHole17);
+        dataValues.put(KEY_DIFF18, difHole18);
         db.insert(TABLE_NAME, null, dataValues);
     }
 
@@ -155,6 +213,24 @@ public class DatabaseCourses extends SQLiteOpenHelper
             modalContact.par16 = cursor.getInt(20);
             modalContact.par17 = cursor.getInt(21);
             modalContact.par18 = cursor.getInt(22);
+            modalContact.diff1 = cursor.getInt(23);
+            modalContact.diff2 = cursor.getInt(24);
+            modalContact.diff3 = cursor.getInt(25);
+            modalContact.diff4 = cursor.getInt(26);
+            modalContact.diff5 = cursor.getInt(27);
+            modalContact.diff6 = cursor.getInt(28);
+            modalContact.diff7 = cursor.getInt(29);
+            modalContact.diff8 = cursor.getInt(30);
+            modalContact.diff9 = cursor.getInt(31);
+            modalContact.diff10 = cursor.getInt(32);
+            modalContact.diff11 = cursor.getInt(33);
+            modalContact.diff12 = cursor.getInt(34);
+            modalContact.diff13 = cursor.getInt(35);
+            modalContact.diff14 = cursor.getInt(36);
+            modalContact.diff15 = cursor.getInt(37);
+            modalContact.diff16 = cursor.getInt(38);
+            modalContact.diff17 = cursor.getInt(39);
+            modalContact.diff18 = cursor.getInt(40);
 
             arrayList.add(modalContact);
         }
@@ -192,6 +268,24 @@ public class DatabaseCourses extends SQLiteOpenHelper
             modalContact.par16 = cursor.getInt(20);
             modalContact.par17 = cursor.getInt(21);
             modalContact.par18 = cursor.getInt(22);
+            modalContact.diff1 = cursor.getInt(23);
+            modalContact.diff2 = cursor.getInt(24);
+            modalContact.diff3 = cursor.getInt(25);
+            modalContact.diff4 = cursor.getInt(26);
+            modalContact.diff5 = cursor.getInt(27);
+            modalContact.diff6 = cursor.getInt(28);
+            modalContact.diff7 = cursor.getInt(29);
+            modalContact.diff8 = cursor.getInt(30);
+            modalContact.diff9 = cursor.getInt(31);
+            modalContact.diff10 = cursor.getInt(32);
+            modalContact.diff11 = cursor.getInt(33);
+            modalContact.diff12 = cursor.getInt(34);
+            modalContact.diff13 = cursor.getInt(35);
+            modalContact.diff14 = cursor.getInt(36);
+            modalContact.diff15 = cursor.getInt(37);
+            modalContact.diff16 = cursor.getInt(38);
+            modalContact.diff17 = cursor.getInt(39);
+            modalContact.diff18 = cursor.getInt(40);
 
             arrayList2.add(modalContact);
         }

@@ -26,6 +26,7 @@ public class Course extends AppCompatActivity implements AdapterView.OnItemSelec
     ArrayList<Integer> activeHandicaps;  // ARRAYLIST TO HOLD GOLFER HANDICAPS IN CURRENT GAME
     ArrayList<String> activeCourse;  // ARRAYLIST TO HOLD COURSE IN CURRENT GAME
     ArrayList<Integer> activePars;  // ARRAYLIST TO HOLD PARS IN CURRENT GAME
+    ArrayList<Integer> activeDiffs;  // ARRAYLIST TO HOLD HOLE DIFFICULTIES IN CURRENT GAME
     Integer courseCount = 0;  // INITIALIZE COURSE COUNT (MAX OF 1)
     String curCourse;  // STRING TO HOLD THE SELECTED COURSE NAME
     float courseRating, courseSlope;  // FLOATS TO HOLD THE SELECTED COURSE RATING AND SLOPE
@@ -133,6 +134,7 @@ public class Course extends AppCompatActivity implements AdapterView.OnItemSelec
                 passRoundInfo.putExtra("handicaps", activeHandicaps);
                 passRoundInfo.putExtra("course", activeCourse);
                 passRoundInfo.putExtra("pars", activePars);
+                passRoundInfo.putExtra("diffs", activeDiffs);
 
                 Bundle courseInfo = new Bundle();
                 courseInfo.putFloat("rating", courseRating);
@@ -187,8 +189,10 @@ public class Course extends AppCompatActivity implements AdapterView.OnItemSelec
             return;
         }
 
-        // INITIALIZE ARRAYLIST THAT HOLDS THE PAR VALUES FOR EACH HOLE
+        // INITIALIZE ARRAYLIST THAT HOLDS THE PAR VALUE FOR EACH HOLE
         activePars = new ArrayList<>();
+        // INITIALIZE ARRAYLIST THAT HOLDS THE DIFFICULTY VALUE FOR EACH HOLE
+        activeDiffs = new ArrayList<>();
 
         while (cursor.moveToNext())
         {
@@ -201,8 +205,16 @@ public class Course extends AppCompatActivity implements AdapterView.OnItemSelec
             {
                 activePars.add(cursor.getInt(i));
             }
+
+            // STORE THE SELECTED COURSE DIFFICULTIES, SHIFT LOOP TO START AT INDEX 23
+            // FIND BETTER WAY TO DO THIS!
+            for (int i = 23; i < (activePars.size() + courseHoles + 5); i++)
+            {
+                activeDiffs.add(cursor.getInt(i));
+            }
         }
         cursor.close();
+
         // TEST TOASTS USED DURING DEVELOPMENT
         // Toast.makeText(getApplicationContext(), activeHandicaps.toString(), Toast.LENGTH_LONG).show();
         // Toast.makeText(getApplicationContext(), activePars.toString(), Toast.LENGTH_LONG).show();

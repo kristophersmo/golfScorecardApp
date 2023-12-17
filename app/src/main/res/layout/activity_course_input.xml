@@ -188,7 +188,7 @@
                 android:textColor="@color/black"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:padding="3dp" />
             <TextView
                 android:background="@drawable/cell_design_holes"
@@ -199,7 +199,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:padding="3dp" />
             <TextView
@@ -211,7 +211,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:padding="3dp" />
             <TextView
@@ -223,7 +223,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:padding="3dp" />
             <TextView
@@ -235,7 +235,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:padding="3dp" />
             <TextView
@@ -247,7 +247,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:padding="3dp" />
             <TextView
@@ -259,7 +259,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:padding="3dp" />
             <TextView
@@ -271,7 +271,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:padding="3dp" />
             <TextView
@@ -283,7 +283,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:padding="3dp" />
             <TextView
@@ -295,7 +295,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:padding="3dp" />
         </TableRow>
@@ -317,7 +317,7 @@
                 android:textColor="@color/black"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:padding="3dp" />
             <EditText
                 android:id="@+id/parHole1"
@@ -332,9 +332,8 @@
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
-                android:textSize="18sp"
-                android:padding="3dp" >
-            </EditText>
+                android:textSize="16sp"
+                android:padding="3dp" />
             <EditText
                 android:id="@+id/parHole2"
                 android:background="@drawable/cell_design_input"
@@ -348,9 +347,8 @@
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
-                android:textSize="18sp"
-                android:padding="3dp" >
-            </EditText>
+                android:textSize="16sp"
+                android:padding="3dp" />
             <EditText
                 android:id="@+id/parHole3"
                 android:background="@drawable/cell_design_input"
@@ -364,9 +362,8 @@
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
-                android:textSize="18sp"
-                android:padding="3dp" >
-            </EditText>
+                android:textSize="16sp"
+                android:padding="3dp" />
             <EditText
                 android:id="@+id/parHole4"
                 android:background="@drawable/cell_design_input"
@@ -380,9 +377,8 @@
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
-                android:textSize="18sp"
-                android:padding="3dp" >
-            </EditText>
+                android:textSize="16sp"
+                android:padding="3dp" />
             <EditText
                 android:id="@+id/parHole5"
                 android:background="@drawable/cell_design_input"
@@ -396,9 +392,8 @@
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
-                android:textSize="18sp"
-                android:padding="3dp" >
-            </EditText>
+                android:textSize="16sp"
+                android:padding="3dp" />
             <EditText
                 android:id="@+id/parHole6"
                 android:background="@drawable/cell_design_input"
@@ -412,9 +407,8 @@
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
-                android:textSize="18sp"
-                android:padding="3dp" >
-            </EditText>
+                android:textSize="16sp"
+                android:padding="3dp" />
             <EditText
                 android:id="@+id/parHole7"
                 android:background="@drawable/cell_design_input"
@@ -428,9 +422,8 @@
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
-                android:textSize="18sp"
-                android:padding="3dp" >
-            </EditText>
+                android:textSize="16sp"
+                android:padding="3dp" />
             <EditText
                 android:id="@+id/parHole8"
                 android:background="@drawable/cell_design_input"
@@ -444,9 +437,8 @@
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
-                android:textSize="18sp"
-                android:padding="3dp" >
-            </EditText>
+                android:textSize="16sp"
+                android:padding="3dp" />
             <EditText
                 android:id="@+id/parHole9"
                 android:background="@drawable/cell_design_input"
@@ -460,13 +452,168 @@
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
-                android:textSize="18sp"
-                android:padding="3dp" >
-            </EditText>
+                android:textSize="16sp"
+                android:padding="3dp" />
         </TableRow>
 
         <TableRow
             android:id="@+id/row3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:weightSum="1"
+            android:visibility="invisible" >
+            <TextView
+                android:background="@drawable/cell_design_input"
+                android:layout_weight="0.075"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:text="@string/difficulty"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:padding="3dp" />
+            <EditText
+                android:id="@+id/diffHole1"
+                android:background="@drawable/cell_design_input"
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="@string/par_input"
+                android:autofillHints=""
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:padding="3dp" />
+            <EditText
+                android:id="@+id/diffHole2"
+                android:background="@drawable/cell_design_input"
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="@string/par_input"
+                android:autofillHints=""
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:padding="3dp" />
+            <EditText
+                android:id="@+id/diffHole3"
+                android:background="@drawable/cell_design_input"
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="@string/par_input"
+                android:autofillHints=""
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:padding="3dp" />
+            <EditText
+                android:id="@+id/diffHole4"
+                android:background="@drawable/cell_design_input"
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="@string/par_input"
+                android:autofillHints=""
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:padding="3dp" />
+            <EditText
+                android:id="@+id/diffHole5"
+                android:background="@drawable/cell_design_input"
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="@string/par_input"
+                android:autofillHints=""
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:padding="3dp" />
+            <EditText
+                android:id="@+id/diffHole6"
+                android:background="@drawable/cell_design_input"
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="@string/par_input"
+                android:autofillHints=""
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:padding="3dp" />
+            <EditText
+                android:id="@+id/diffHole7"
+                android:background="@drawable/cell_design_input"
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="@string/par_input"
+                android:autofillHints=""
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:padding="3dp" />
+            <EditText
+                android:id="@+id/diffHole8"
+                android:background="@drawable/cell_design_input"
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="@string/par_input"
+                android:autofillHints=""
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:padding="3dp" />
+            <EditText
+                android:id="@+id/diffHole9"
+                android:background="@drawable/cell_design_input"
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="@string/par_input"
+                android:autofillHints=""
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:padding="3dp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -482,7 +629,7 @@
                 android:textColor="@color/black"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:padding="3dp" />
             <TextView
                 android:background="@drawable/cell_design_holes"
@@ -493,7 +640,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:padding="3dp" />
             <TextView
@@ -505,7 +652,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:padding="3dp" />
             <TextView
@@ -517,7 +664,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:padding="3dp" />
             <TextView
@@ -529,7 +676,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:padding="3dp" />
             <TextView
@@ -541,7 +688,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:padding="3dp" />
             <TextView
@@ -553,7 +700,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:padding="3dp" />
             <TextView
@@ -565,7 +712,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:padding="3dp" />
             <TextView
@@ -577,7 +724,7 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:padding="3dp" />
             <TextView
@@ -590,13 +737,13 @@
                 android:textAlignment="center"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textColor="@color/black"
                 android:padding="3dp" />
         </TableRow>
 
         <TableRow
-            android:id="@+id/row4"
+            android:id="@+id/row5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
@@ -612,24 +759,23 @@
                 android:textColor="@color/black"
                 android:textAllCaps="true"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:padding="3dp" />
             <EditText
                 android:id="@+id/parHole10"
-                android:background="@drawable/cell_design_input"
-                android:layout_weight="0.1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:inputType="number"
-                android:hint="@string/par_input"
+                android:layout_weight="0.1"
                 android:autofillHints=""
-                android:textColorHint="@color/black"
-                android:textColor="@color/black"
+                android:background="@drawable/cell_design_input"
+                android:hint="@string/par_input"
+                android:inputType="number"
+                android:padding="3dp"
                 android:textAlignment="center"
-                android:textStyle="normal"
-                android:textSize="18sp"
-                android:padding="3dp" >
-            </EditText>
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textSize="16sp"
+                android:textStyle="normal"/>
             <EditText
                 android:id="@+id/parHole11"
                 android:background="@drawable/cell_design_input"
@@ -643,9 +789,8 @@
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
-                android:textSize="18sp"
-                android:padding="3dp" >
-            </EditText>
+                android:textSize="16sp"
+                android:padding="3dp" />
             <EditText
                 android:id="@+id/parHole12"
                 android:background="@drawable/cell_design_input"
@@ -659,9 +804,8 @@
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
-                android:textSize="18sp"
-                android:padding="3dp" >
-            </EditText>
+                android:textSize="16sp"
+                android:padding="3dp" />
             <EditText
                 android:id="@+id/parHole13"
                 android:background="@drawable/cell_design_input"
@@ -675,9 +819,8 @@
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
-                android:textSize="18sp"
-                android:padding="3dp" >
-            </EditText>
+                android:textSize="16sp"
+                android:padding="3dp" />
             <EditText
                 android:id="@+id/parHole14"
                 android:background="@drawable/cell_design_input"
@@ -691,9 +834,8 @@
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
-                android:textSize="18sp"
-                android:padding="3dp" >
-            </EditText>
+                android:textSize="16sp"
+                android:padding="3dp" />
             <EditText
                 android:id="@+id/parHole15"
                 android:background="@drawable/cell_design_input"
@@ -707,9 +849,8 @@
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
-                android:textSize="18sp"
-                android:padding="3dp" >
-            </EditText>
+                android:textSize="16sp"
+                android:padding="3dp" />
             <EditText
                 android:id="@+id/parHole16"
                 android:background="@drawable/cell_design_input"
@@ -723,9 +864,8 @@
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
-                android:textSize="18sp"
-                android:padding="3dp" >
-            </EditText>
+                android:textSize="16sp"
+                android:padding="3dp" />
             <EditText
                 android:id="@+id/parHole17"
                 android:background="@drawable/cell_design_input"
@@ -739,9 +879,8 @@
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
-                android:textSize="18sp"
-                android:padding="3dp" >
-            </EditText>
+                android:textSize="16sp"
+                android:padding="3dp" />
             <EditText
                 android:id="@+id/parHole18"
                 android:background="@drawable/cell_design_input"
@@ -755,9 +894,164 @@
                 android:textColor="@color/black"
                 android:textAlignment="center"
                 android:textStyle="normal"
-                android:textSize="18sp"
-                android:padding="3dp" >
-            </EditText>
+                android:textSize="16sp"
+                android:padding="3dp" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:weightSum="1"
+            android:visibility="invisible" >
+            <TextView
+                android:background="@drawable/cell_design_input"
+                android:layout_weight="0.075"
+                android:layout_width="75dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:text="@string/difficulty"
+                android:textColor="@color/black"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:padding="3dp" />
+            <EditText
+                android:id="@+id/diffHole10"
+                android:background="@drawable/cell_design_input"
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="@string/par_input"
+                android:autofillHints=""
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:padding="3dp" />
+            <EditText
+                android:id="@+id/diffHole11"
+                android:background="@drawable/cell_design_input"
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="@string/par_input"
+                android:autofillHints=""
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:padding="3dp" />
+            <EditText
+                android:id="@+id/diffHole12"
+                android:background="@drawable/cell_design_input"
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="@string/par_input"
+                android:autofillHints=""
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:padding="3dp" />
+            <EditText
+                android:id="@+id/diffHole13"
+                android:background="@drawable/cell_design_input"
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="@string/par_input"
+                android:autofillHints=""
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:padding="3dp" />
+            <EditText
+                android:id="@+id/diffHole14"
+                android:background="@drawable/cell_design_input"
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="@string/par_input"
+                android:autofillHints=""
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:padding="3dp" />
+            <EditText
+                android:id="@+id/diffHole15"
+                android:background="@drawable/cell_design_input"
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="@string/par_input"
+                android:autofillHints=""
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:padding="3dp" />
+            <EditText
+                android:id="@+id/diffHole16"
+                android:background="@drawable/cell_design_input"
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="@string/par_input"
+                android:autofillHints=""
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:padding="3dp" />
+            <EditText
+                android:id="@+id/diffHole17"
+                android:background="@drawable/cell_design_input"
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="@string/par_input"
+                android:autofillHints=""
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:padding="3dp" />
+            <EditText
+                android:id="@+id/diffHole18"
+                android:background="@drawable/cell_design_input"
+                android:layout_weight="0.1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:hint="@string/par_input"
+                android:autofillHints=""
+                android:textColorHint="@color/black"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:padding="3dp" />
         </TableRow>
     </TableLayout>
 
