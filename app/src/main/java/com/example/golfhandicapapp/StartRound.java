@@ -119,6 +119,7 @@ public class StartRound extends AppCompatActivity
                 scoring.putInt("scoreP4", finalScoreP4);
                 finishGame.putExtras(scoring);
                 startActivity(finishGame);
+                finish();
             }
         });
     }

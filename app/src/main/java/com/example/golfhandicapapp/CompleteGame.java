@@ -1,15 +1,19 @@
 package com.example.golfhandicapapp;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
+import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class CompleteGame extends AppCompatActivity
 {
     TextView scoreP1, scoreP2, scoreP3, scoreP4;  // SCORING RESULTS PER PLAYER
+    Button discardResults, keepResults;  // BUTTONS FOR HANDLING RESULTS
     ArrayList<String> activePlayers;  // ARRAYLIST TO HOLD PLAYERS IN CURRENT GAME
     ArrayList<Integer> activeHandicaps;  // ARRAYLIST TO HOLD GOLFER HANDICAPS IN CURRENT GAME
     int finalScoreP1, finalScoreP2, finalScoreP3, finalScoreP4;
@@ -22,6 +26,10 @@ public class CompleteGame extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complete_game);
+
+        // DEFINING END GAME BUTTONS
+        discardResults = findViewById(R.id.killResults);
+        keepResults = findViewById(R.id.saveResults);
 
         // DATABASE HELPER VARIABLE FOR COURSE DB
         courseDB = new DatabaseCourses(this);
@@ -58,5 +66,25 @@ public class CompleteGame extends AppCompatActivity
         scoreP2.setText("Final Score: " + String.format(String.valueOf(finalScoreP2)));
         scoreP3.setText("Final Score: " + String.format(String.valueOf(finalScoreP3)));
         scoreP4.setText("Final Score: " + String.format(String.valueOf(finalScoreP4)));
+
+
+        this.discardResults.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                finish();
+            }
+        });
+
+
+        keepResults.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+
+            }
+        });
     }
 }

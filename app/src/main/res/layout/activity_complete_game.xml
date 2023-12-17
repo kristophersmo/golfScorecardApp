@@ -205,7 +205,7 @@
         android:paddingHorizontal="20dp" />
 
     <TextView
-        android:id="@+id/saveInstructions2"
+        android:id="@+id/endInstructions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/saveResults"
@@ -221,7 +221,7 @@
         android:id="@+id/killResults"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/saveInstructions2"
+        android:layout_below="@+id/endInstructions"
         android:layout_centerHorizontal="true"
         android:backgroundTint="@color/red"
         android:textSize="20sp"

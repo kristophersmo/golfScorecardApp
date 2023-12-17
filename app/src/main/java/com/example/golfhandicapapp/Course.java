@@ -130,8 +130,11 @@ public class Course extends AppCompatActivity implements AdapterView.OnItemSelec
                 courseInfo.putFloat("slope", courseSlope);
                 courseInfo.putInt("holes", courseHoles);
                 passRoundInfo.putExtras(courseInfo);
-
                 startActivity(passRoundInfo);
+
+                // FINISH PLAYERS AND COURSE ACTIVITIES WHEN SCORECARD IS LOADED
+                Players.getInstance().finish();
+                finish();
             }
         });
     }

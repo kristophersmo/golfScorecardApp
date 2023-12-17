@@ -29,6 +29,7 @@ public class Players extends AppCompatActivity implements OnItemSelectedListener
     ArrayList<String> activePlayers;  // ARRAYLIST TO HOLD PLAYERS IN CURRENT GAME
     ArrayList<Integer> activeHandicaps;  // ARRAYLIST TO HOLD GOLFER HANDICAPS IN CURRENT GAME
     Integer playerCount = 0;  // INITIALIZE PLAYER COUNT (MAX OF 4)
+    static Players status;
 
 
     @Override
@@ -61,6 +62,8 @@ public class Players extends AppCompatActivity implements OnItemSelectedListener
 
         // DATABASE HELPER VARIABLE FOR GOLFERS DB
         golferDB = new DatabaseGolfers(this);
+
+        status = this;
 
         // KEEP PLAYER DROP-DOWN MENU UPDATED USING PLAYERS DB
         refreshPlayerMenu(golferDB);
@@ -177,6 +180,7 @@ public class Players extends AppCompatActivity implements OnItemSelectedListener
                 sendPlayers.putExtra("players", activePlayers);
                 sendPlayers.putExtra("handicaps", activeHandicaps);
                 startActivity(sendPlayers);
+                //finish();
             }
         });
     }
@@ -214,6 +218,13 @@ public class Players extends AppCompatActivity implements OnItemSelectedListener
     public void onNothingSelected(AdapterView<?> adapterView)
     {
 
+    }
+
+
+    // THIS FUNCTION IS USED TO FINISH THE PLAYERS ACTIVITY WHEN SCORECARD IS LOADED
+    public static Players getInstance()
+    {
+        return status;
     }
 }
 
