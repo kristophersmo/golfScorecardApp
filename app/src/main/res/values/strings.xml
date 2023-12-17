@@ -68,6 +68,7 @@
     <string name="handicap">Handicap</string>
     <string name="par_input">?</string>
     <string name="acceptCourse">Save Course</string>
+    <string name="cancelCourse">CANCEL</string>
 
     <string name="playStart">Your Round Has Started!</string>
     <string name="course">(SELECTED COURSE)</string>

@@ -18,12 +18,14 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main_activity);
 
         getPlayers = findViewById(R.id.startRound);
+
         getPlayers.setOnClickListener(new OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
                 startActivity(new Intent(MainActivity.this, Players.class));
+                finish();
             }
         });
     }

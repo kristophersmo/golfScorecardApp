@@ -16,6 +16,7 @@
 
         <activity
             android:name=".MainActivity"
+            android:label="@string/app_name"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -52,6 +53,7 @@
         <activity
             android:name=".CourseInput"
             android:parentActivityName=".Course"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
             android:exported="false"
             android:screenOrientation="portrait">
             <intent-filter>

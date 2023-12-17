@@ -1,7 +1,5 @@
 package com.example.golfhandicapapp;
 
-import android.annotation.SuppressLint;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -9,6 +7,7 @@ import android.widget.TextView;
 import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
+import android.annotation.SuppressLint;
 
 public class CompleteGame extends AppCompatActivity
 {
@@ -62,10 +61,10 @@ public class CompleteGame extends AppCompatActivity
         scoreP3 = findViewById(R.id.scoreP3);
         scoreP4 = findViewById(R.id.scoreP4);
 
-        scoreP1.setText("Final Score: " + String.format(String.valueOf(finalScoreP1)));
-        scoreP2.setText("Final Score: " + String.format(String.valueOf(finalScoreP2)));
-        scoreP3.setText("Final Score: " + String.format(String.valueOf(finalScoreP3)));
-        scoreP4.setText("Final Score: " + String.format(String.valueOf(finalScoreP4)));
+        scoreP1.setText("FINAL SCORE: " + String.format(String.valueOf(finalScoreP1)));
+        scoreP2.setText("FINAL SCORE: " + String.format(String.valueOf(finalScoreP2)));
+        scoreP3.setText("FINAL SCORE: " + String.format(String.valueOf(finalScoreP3)));
+        scoreP4.setText("FINAL SCORE: " + String.format(String.valueOf(finalScoreP4)));
 
 
         this.discardResults.setOnClickListener(new View.OnClickListener()
@@ -78,7 +77,7 @@ public class CompleteGame extends AppCompatActivity
         });
 
 
-        keepResults.setOnClickListener(new View.OnClickListener()
+        this.keepResults.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)

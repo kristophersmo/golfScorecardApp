@@ -1,6 +1,5 @@
 package com.example.golfhandicapapp;
 
-import static java.lang.Integer.parseInt;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -17,6 +16,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.Objects;
+import static java.lang.Integer.parseInt;
 
 public class Players extends AppCompatActivity implements OnItemSelectedListener
 {
@@ -63,6 +63,7 @@ public class Players extends AppCompatActivity implements OnItemSelectedListener
         // DATABASE HELPER VARIABLE FOR GOLFERS DB
         golferDB = new DatabaseGolfers(this);
 
+        //  FOR FINISHING ACTIVITY (CALL GET INSTANCE)
         status = this;
 
         // KEEP PLAYER DROP-DOWN MENU UPDATED USING PLAYERS DB

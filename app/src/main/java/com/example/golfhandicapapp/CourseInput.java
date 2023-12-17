@@ -6,31 +6,31 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import java.util.ArrayList;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Toolbar;
+
 import java.util.Objects;
 import com.google.android.material.textfield.TextInputLayout;
-import java.util.ArrayList;
-import static java.lang.Math.round;
-
 
 public class CourseInput extends AppCompatActivity implements OnItemSelectedListener
 {
-    ActionBar actionBar;  // APP HEADER
     Spinner spinner_holes;  // SPINNER DROP-DOWN MENU (NUMBER OF HOLES)
-    Button acceptCourse;  // TO SAVE COURSE INPUT
+    Button cancelCourse, acceptCourse;  // TO SAVE COURSE INPUT
     TextInputLayout courseName, courseRating, courseSlope;  // FIELDS FOR COURSE INPUT
     TextView enter_par;  // SHOW INSTRUCTIONS FOR TABLE INPUT
     TableLayout courseTable;  // TABLE LAYOUT FOR COURSE INPUT
     TableRow row1, row2, row3, row4;  // TABLE ROWS (FOR COURSE INPUT)
     DatabaseCourses courseDB;  // FOR COURSE DATABASE FUNCTIONS
+    ArrayList<String> activePlayers;  // ARRAYLIST TO HOLD PLAYERS IN CURRENT GAME
+    ArrayList<Integer> activeHandicaps;  // ARRAYLIST TO HOLD GOLFER HANDICAPS IN CURRENT GAME
     String curHoles;  // HOLDS CURRENT VALUE, NUMBER OF HOLES ON COURSE
     EditText par_1, par_2, par_3, par_4, par_5, par_6, par_7, par_8, par_9;  // FRONT 9 PARS
     EditText par_10, par_11, par_12, par_13, par_14, par_15, par_16, par_17, par_18;  // BACK 9 PARS
@@ -40,12 +40,6 @@ public class CourseInput extends AppCompatActivity implements OnItemSelectedList
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_course_input);
-
-        // ACTION BAR FOR NAVIGATING BACKWARDS
-        actionBar = getSupportActionBar();
-        Objects.requireNonNull(actionBar).setTitle("BACK");
-        actionBar.setDisplayShowHomeEnabled(true);
-        actionBar.setDisplayHomeAsUpEnabled(true);
 
         // DEFINING VARIABLES FOR EACH LAYOUT ITEM
         row1 = findViewById(R.id.row1);
@@ -76,7 +70,14 @@ public class CourseInput extends AppCompatActivity implements OnItemSelectedList
         par_17 = findViewById(R.id.parHole17);
         par_18 = findViewById(R.id.parHole18);
         enter_par = findViewById(R.id.instruction4);
+        cancelCourse = findViewById(R.id.cancelCourse);
         acceptCourse = findViewById(R.id.acceptCourse);
+
+        // RETRIEVING THE PLAYER DATA THAT WAS SELECTED (FROM PLAYERS CLASS)
+        Intent intent = getIntent();
+        activePlayers = intent.getStringArrayListExtra("players");
+        activeHandicaps = intent.getIntegerArrayListExtra("handicaps");
+        // Toast.makeText(getApplicationContext(), activePlayers.toString(), Toast.LENGTH_SHORT).show();
 
         // DATABASE HELPER VARIABLE FOR COURSE DB
         courseDB = new DatabaseCourses(this);
@@ -86,6 +87,20 @@ public class CourseInput extends AppCompatActivity implements OnItemSelectedList
                 R.array.numberOfHoles, R.layout.select_holes);
         spinner_holes.setAdapter(displayHoles);
         spinner_holes.setOnItemSelectedListener(this);
+
+
+        cancelCourse.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                // PASS PLAYER INFO BACK TO COURSE SELECTION ACTIVITY
+                Intent passPlayers = new Intent(CourseInput.this, Course.class);
+                passPlayers.putExtra("players", activePlayers);
+                passPlayers.putExtra("handicaps", activeHandicaps);
+                startActivity(passPlayers);
+            }
+        });
 
 
         // ON-CLICK, RECEIVES COURSE INPUT DATA AND WRITES TO COURSE DB (IF ACCEPTABLE)
@@ -160,7 +175,12 @@ public class CourseInput extends AppCompatActivity implements OnItemSelectedList
                             par1, par2, par3, par4, par5, par6, par7, par8, par9,
                             par10, par11, par12, par13, par14, par15, par16, par17, par18);
                     Toast.makeText(getApplicationContext(), "COURSE ADD SUCCESSFUL", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(CourseInput.this, Course.class));
+
+                    // PASS PLAYER INFO BACK TO COURSE SELECTION ACTIVITY
+                    Intent passPlayers = new Intent(CourseInput.this, Course.class);
+                    passPlayers.putExtra("players", activePlayers);
+                    passPlayers.putExtra("handicaps", activeHandicaps);
+                    startActivity(passPlayers);
                 }
             }
         });

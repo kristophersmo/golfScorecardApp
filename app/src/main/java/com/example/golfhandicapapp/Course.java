@@ -30,6 +30,7 @@ public class Course extends AppCompatActivity implements AdapterView.OnItemSelec
     String curCourse;  // STRING TO HOLD THE SELECTED COURSE NAME
     float courseRating, courseSlope;  // FLOATS TO HOLD THE SELECTED COURSE RATING AND SLOPE
     int courseHoles;  // INT TO HOLD THE NUMBER OF HOLES ON THE SELECTED COURSE
+    static Course status;
 
 
     @Override
@@ -59,6 +60,9 @@ public class Course extends AppCompatActivity implements AdapterView.OnItemSelec
         // DATABASE HELPER VARIABLE FOR COURSE DB
         courseDB = new DatabaseCourses(this);
 
+        //  FOR FINISHING ACTIVITY (CALL GET INSTANCE)
+        status = this;
+
         // THIS FUNCTION KEEPS THE COURSE DROP-DOWN MENU UPDATED USING COURSE DB
         refreshCourseMenu(courseDB);
 
@@ -66,7 +70,8 @@ public class Course extends AppCompatActivity implements AdapterView.OnItemSelec
         Intent intent = getIntent();
         activePlayers = intent.getStringArrayListExtra("players");
         activeHandicaps = intent.getIntegerArrayListExtra("handicaps");
-        displayPlayers();
+
+        displayPlayers(activePlayers);
 
         // WAIT FOR USER TO SELECT A COURSE FROM THE LIST
         spinner_courses.setOnItemSelectedListener(this);
@@ -102,12 +107,16 @@ public class Course extends AppCompatActivity implements AdapterView.OnItemSelec
 
 
         // ON-CLICK, SENDS USER TO THE COURSE INPUT ACTIVITY FOR INPUT OF A NEW COURSE
+        // PASSES PLAYER INFO SUCH THAT IT IS NOT LOST
         create.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View view)
             {
-                startActivity(new Intent(Course.this, CourseInput.class));
+                Intent passPlayers = new Intent(Course.this, CourseInput.class);
+                passPlayers.putExtra("players", activePlayers);
+                passPlayers.putExtra("handicaps", activeHandicaps);
+                startActivity(passPlayers);
             }
         });
 
@@ -201,7 +210,7 @@ public class Course extends AppCompatActivity implements AdapterView.OnItemSelec
 
 
     // RETRIEVING THE PLAYERS THAT WERE SELECTED (FROM PLAYERS CLASS)
-    private void displayPlayers()
+    private void displayPlayers(ArrayList activePlayers)
     {
         String gamePlayers = "";
         for (int i = 0; i < activePlayers.size(); i++)
@@ -223,6 +232,13 @@ public class Course extends AppCompatActivity implements AdapterView.OnItemSelec
     public void onNothingSelected(AdapterView<?> adapterView)
     {
 
+    }
+
+
+    // THIS FUNCTION IS USED TO FINISH THE PLAYERS ACTIVITY WHEN SCORECARD IS LOADED
+    public static Course getInstance()
+    {
+        return status;
     }
 }
 
